@@ -1,0 +1,1 @@
+let icon = document.querySelectorAll(".icon");

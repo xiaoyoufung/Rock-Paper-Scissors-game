@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.icon {
+    @apply w-60 h-60 rounded-full grid place-items-center shadow-lg relative cursor-pointer;
+}
+
+.inner-icon {
+    @apply bg-white w-44 h-44 rounded-full grid place-items-center z-10;
+}
+
+.icon-shadow {
+    @apply bg-black/20 w-60 h-60 rounded-full absolute top-3 -z-10;
+}

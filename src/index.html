@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+
+  <link href="/dist/output.css" rel="stylesheet">
+  
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+
+  <!-- 
+  Rules
+
+  You Picked
+  The House Picked
+
+  You Win
+  You Lose
+
+  Play Again -->
+</head>
+<body class="font-barlow bg-gradient-to-t from-bg-BG2 to-bg-BG1 grid place-items-center min-h-screen">
+  
+  <header>
+    <div class="flex justify-between w-248 p-6 border-3 border-neutral-HO rounded-2xl">
+      <div class="text-4xl text-white uppercase flex-col flex leading-none font-bold">
+        <span>Rock</span>
+        <span>Paper</span>
+        <span>Scissors</span>
+      </div>
+
+      <div class="bg-white w-36 rounded-md flex flex-col justify-center items-center">
+        <span class="uppercase tracking-widest text-neutral-ST text">Score</span>
+        <span class="text-6xl font-bold text-zinc-600">12</span>
+      </div>
+    </div>
+
+    <div>
+
+    </div>
+  </header>
+  
+  <main class="grid place-items-center p-10">
+    <img class="absolute -z-30" src="./img/bg-triangle.svg" alt="bg-triangle">
+
+    <div class="flex justify-between w-128">
+      <!-- paper icon -->
+      <div class="bg-gradient-to-t from-primary-PG1 to-primary-PG2 icon">
+        <div class="bg-gray-300 w-44 h-44 rounded-full absolute top-6"></div>
+        <div class="inner-icon">
+          <img class="w-20" src="./img/icon-paper.svg" alt="icon-paper">
+        </div>
+        <div class="icon-shadow"></div>
+        <div class="bg-primary-PG1 w-60 h-60 rounded-full absolute top-3 -z-20"></div>
+      </div>
+      
+      <!-- scissors icon -->
+      <div class="bg-gradient-to-t from-primary-SG1 to-primary-SG2 icon">
+        <div class="bg-gray-300 w-44 h-44 rounded-full absolute top-6"></div>
+        <div class="inner-icon">
+          <img class="w-20" src="./img/icon-scissors.svg" alt="icon-scissors">
+        </div>
+        <div class="icon-shadow"></div>
+        <div class="bg-primary-SG1 w-60 h-60 rounded-full absolute top-3 -z-20"></div>
+      </div>
+    </div>
+
+    <!-- rock icon -->
+    <div class="bg-gradient-to-t from-primary-RG1 to-primary-RG2 icon">
+      <div class="bg-gray-300 w-44 h-44 rounded-full absolute top-6"></div>
+      <div class="inner-icon">
+        <img class="w-20" src="./img/icon-rock.svg" alt="icon-rock">
+      </div>
+      <div class="icon-shadow"></div>
+      <div class="bg-primary-RG1 w-60 h-60 rounded-full absolute top-3 -z-20"></div>
+    </div>
+  </main>
+
+
+  <!-- rule -->
+  <section class="bg-slate-900/50 w-screen h-screen absolute top-0 grid place-content-center drop-shadow-md hidden">
+    <div class="bg-white p-8 rounded-lg w-full h-full sm:w-fit sm:h-fit ">
+      <div class="flex justify-between items-center">
+        <p class="uppercase text-3xl font-bold text-neutral-DT">Rules</p>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" 
+        class="w-8 h-8 text-gray-300 cursor-pointer">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>        
+      </div>
+      
+      <img class="px-4 pt-10" src="./img/image-rules.svg" alt="image-rules">
+    </div>
+  </section>
+
+
+
+  <footer>
+    <div class="text-neutral-HO">
+      Challenge by <a class="text-white" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a class="text-white" href="#">UnknownFS</a>.
+    </div>
+  </footer>
+  
+</body>
+</html>
