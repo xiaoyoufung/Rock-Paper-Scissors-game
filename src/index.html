@@ -12,28 +12,26 @@
 
   <!-- 
   Rules
-
-  You Picked
-  The House Picked
+  
 
   You Win
   You Lose
 
   Play Again -->
 </head>
-<body class="font-barlow bg-gradient-to-t from-bg-BG2 to-bg-BG1 grid place-items-center min-h-screen">
+<body class="font-barlow bg-bg-BG1 bg-gradient-to-t from-bg-BG2 to-bg-BG1 grid place-items-center min-h-screen relative">
   
   <header>
-    <div class="flex justify-between w-248 p-6 border-3 border-neutral-HO rounded-2xl">
-      <div class="text-4xl text-white uppercase flex-col flex leading-none font-bold">
+    <div class="flex justify-between w-128 sm:w-248 p-4 sm:p-6 border-4 sm:border-3 border-neutral-HO rounded-md sm:rounded-2xl my-10 sm:my-0">
+      <div class="text-3xl sm:text-4xl text-white uppercase flex-col flex leading-none font-bold px-4 pl-3 sm:pl-0">
         <span>Rock</span>
         <span>Paper</span>
         <span>Scissors</span>
       </div>
 
-      <div class="bg-white w-36 rounded-md flex flex-col justify-center items-center">
+      <div class="bg-white py-2 sm:py-0 w-28 sm:w-40 rounded-md flex flex-col justify-center items-center">
         <span class="uppercase tracking-widest text-neutral-ST text">Score</span>
-        <span class="text-6xl font-bold text-zinc-600">12</span>
+        <span class="sm:text-7xl text-6xl font-bold text-zinc-600">12</span>
       </div>
     </div>
 
@@ -42,55 +40,109 @@
     </div>
   </header>
   
-  <main class="grid place-items-center p-10">
-    <img class="absolute -z-30" src="./img/bg-triangle.svg" alt="bg-triangle">
+  <main>
+    <!-- icon -->
+    <div id="icon" class="grid place-items-center p-10">
+      <img class="absolute -z-30" src="./img/bg-triangle.svg" alt="bg-triangle">
 
-    <div class="flex justify-between w-128">
-      <!-- paper icon -->
-      <div class="bg-gradient-to-t from-primary-PG1 to-primary-PG2 icon">
-        <div class="bg-gray-300 w-44 h-44 rounded-full absolute top-6"></div>
-        <div class="inner-icon">
-          <img class="w-20" src="./img/icon-paper.svg" alt="icon-paper">
+      <div class="flex justify-between w-128 relative">
+        <!-- paper icon -->
+        <div id="paper" class="bg-gradient-to-t from-primary-PG1 to-primary-PG2 icon w-60 h-60">
+          <div class="bg-gray-300 w-44 h-44 rounded-full absolute top-6"></div>
+          <div class="inner-icon w-44 h-44">
+            <img class="w-20" src="./img/icon-paper.svg" alt="icon-paper">
+          </div>
+          <div class="icon-shadow w-60 h-60"></div>
+          <div class="bg-primary-PG1 w-60 h-60 rounded-full absolute top-3 -z-20"></div>
         </div>
-        <div class="icon-shadow"></div>
-        <div class="bg-primary-PG1 w-60 h-60 rounded-full absolute top-3 -z-20"></div>
-      </div>
-      
-      <!-- scissors icon -->
-      <div class="bg-gradient-to-t from-primary-SG1 to-primary-SG2 icon">
-        <div class="bg-gray-300 w-44 h-44 rounded-full absolute top-6"></div>
-        <div class="inner-icon">
-          <img class="w-20" src="./img/icon-scissors.svg" alt="icon-scissors">
+        
+        <!-- scissors icon -->
+        <div id="scissor" class="bg-gradient-to-t from-primary-SG1 to-primary-SG2 icon w-60 h-60">
+          <div class="bg-gray-300 w-44 h-44 rounded-full absolute top-6"></div>
+          <div class="inner-icon w-44 h-44">
+            <img class="w-20" src="./img/icon-scissors.svg" alt="icon-scissors">
+          </div>
+          <div class="icon-shadow w-60 h-60"></div>
+          <div class="bg-primary-SG1 w-60 h-60 rounded-full absolute top-3 -z-20"></div>
         </div>
-        <div class="icon-shadow"></div>
-        <div class="bg-primary-SG1 w-60 h-60 rounded-full absolute top-3 -z-20"></div>
       </div>
-    </div>
+  
+      <!-- rock icon -->
+      <div id="rock" class="bg-gradient-to-t from-primary-RG1 to-primary-RG2 icon w-60 h-60">
+        <div class="bg-gray-300 w-44 h-44 rounded-full absolute top-6"></div>
+        <div class="inner-icon w-44 h-44">
+          <img class="w-20" src="./img/icon-rock.svg" alt="icon-rock">
+        </div>
+        <div class="icon-shadow w-60 h-60"></div>
+        <div class="bg-primary-RG1 w-60 h-60 rounded-full absolute top-3 -z-20"></div>
+      </div>
 
-    <!-- rock icon -->
-    <div class="bg-gradient-to-t from-primary-RG1 to-primary-RG2 icon">
-      <div class="bg-gray-300 w-44 h-44 rounded-full absolute top-6"></div>
-      <div class="inner-icon">
-        <img class="w-20" src="./img/icon-rock.svg" alt="icon-rock">
+      <!-- rule icon -->
+      <div id="rule" class="sm:absolute sm:right-6 sm:bottom-6 cursor-pointer">
+        <div class="border-white border-2 rounded-lg w-40 flex justify-center mt-32">
+          <p class="text-xl text-white uppercase tracking-widest py-3">Rules</p>
+        </div>
       </div>
-      <div class="icon-shadow"></div>
-      <div class="bg-primary-RG1 w-60 h-60 rounded-full absolute top-3 -z-20"></div>
+
     </div>
+    
+
   </main>
 
+<!-- select icon page -->
+  <section class="flex w-248 justify-between">
+    <!-- our pick -->
+    <div class="flex justify-center flex-col items-center">
+      <p class="text-white font-bold tracking-widest text-3xl uppercase" >You Picked</p>
 
-  <!-- rule -->
-  <section class="bg-slate-900/50 w-screen h-screen absolute top-0 grid place-content-center drop-shadow-md hidden">
-    <div class="bg-white p-8 rounded-lg w-full h-full sm:w-fit sm:h-fit ">
-      <div class="flex justify-between items-center">
+      <div id="rock" class="bg-gradient-to-t from-primary-RG1 to-primary-RG2 icon w-80 h-80 my-16">
+        <div class="bg-gray-300 w-60 h-60 rounded-full absolute top-7"></div>
+        <div class="inner-icon w-60 h-60">
+          <img class="w-25" src="./img/icon-rock.svg" alt="icon-rock">
+        </div>
+        <div class="icon-shadow w-80 h-80"></div>
+        <div class="bg-primary-RG1 w-80 h-80 rounded-full absolute top-3 -z-20"></div>
+      </div>
+    </div>
+
+    <!-- the house's pick -->
+    <div class="flex justify-center flex-col items-center">
+      <p class="text-white font-bold tracking-widest text-3xl uppercase" >The House Picked</p>
+
+      <div id="rock" class="bg-gradient-to-t from-primary-RG1 to-primary-RG2 icon w-80 h-80 my-16">
+        <div class="bg-gray-300 w-60 h-60 rounded-full absolute top-7"></div>
+        <div class="inner-icon w-60 h-60">
+          <img class="w-25" src="./img/icon-rock.svg" alt="icon-rock">
+        </div>
+        <div class="icon-shadow w-80 h-80"></div>
+        <div class="bg-primary-RG1 w-80 h-80 rounded-full absolute top-3 -z-20"></div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- rule page -->
+  <section id="rule-page" class="bg-slate-900/50 w-full h-full absolute grid place-items-center drop-shadow-md hidden z-40">
+    <div class="bg-white p-8 sm:rounded-lg w-full h-full sm:w-fit sm:h-fit ">
+      <div class="flex justify-center sm:justify-between items-center">
         <p class="uppercase text-3xl font-bold text-neutral-DT">Rules</p>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" 
-        class="w-8 h-8 text-gray-300 cursor-pointer">
+        <svg id="close-rule" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" 
+        class="w-8 h-8 text-gray-300 cursor-pointer hidden sm:inline">
           <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
         </svg>        
       </div>
       
       <img class="px-4 pt-10" src="./img/image-rules.svg" alt="image-rules">
+
+      <div class="flex justify-center mt-10">
+        <svg id="close-btn" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" 
+        class="w-8 h-8 text-gray-300 cursor-pointer sm:hidden">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg> 
+      </div>
+
+
     </div>
   </section>
 
@@ -102,6 +154,7 @@
       Coded by <a class="text-white" href="#">UnknownFS</a>.
     </div>
   </footer>
-  
+
+  <script src="index.js"></script>
 </body>
 </html>
