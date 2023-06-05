@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 .icon {
-    @apply rounded-full grid place-items-center shadow-lg relative cursor-pointer;
+    @apply rounded-full grid place-items-center shadow-lg relative;
 }
 
 .inner-icon {
