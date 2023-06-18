@@ -77,18 +77,12 @@ function startGame(select) {
 
 function playerSelectIcon(playerSelect) {
 
-    if(selectIcon.classList.contains('hidden')){
-        selectIcon.classList.remove('hidden');
-    } else {
-        selectIcon.classList.add('hidden');
-    }
+    selectIcon.classList.remove('hidden');
 
     ourPickedIconImg.src = "./img/icon-" + GameOption[playerSelect].icon + ".svg";
     ourPickedIcon.classList.add("from-primary-" + GameOption[playerSelect].color + "1");
     ourPickedIcon.classList.add("to-primary-" + GameOption[playerSelect].color + "2");
     ourPickedIconShadow.classList.add("bg-primary-" + GameOption[playerSelect].color + "1");
-
-
 }
 
 function houseSelectIcon(playerSelect) {
@@ -128,7 +122,7 @@ function houseSelectIcon(playerSelect) {
         showResult.classList.remove('hidden');
         showScore.textContent = score;
 
-      }, 2000)
+      }, 1600)
 
 }
 
@@ -149,5 +143,19 @@ function houseWin() {
 }
 
 function restartGame() {
+    icon.classList.remove('hidden');
+    selectIcon.classList.add('hidden');
+    housePicked.classList.add('hidden');
+    selectIcon.classList.add('w-248');
+    showResult.classList.add('hidden');
+    ourWinShd.classList.add('hidden');
+    houseWinShd.classList.add('hidden');
+    emptyPick.classList.remove('empty');
 
+
+    ourPickedIcon.classList = "icon w-80 h-80 my-16 bg-gradient-to-t";
+    ourPickedIconShadow.classList = "w-80 h-80 rounded-full absolute top-3 -z-20";
+
+    housePickedIcon.classList = "bg-gradient-to-t icon w-80 h-80 my-16";
+    housePickedShadow.classList = "w-80 h-80 rounded-full absolute top-3 -z-20";
 }
